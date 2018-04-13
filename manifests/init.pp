@@ -1,6 +1,7 @@
 class network (
 
-  $gateway = pick($gateway, regsubst($network_eth0, '^(\d+)\.(\d+)\.(\d+)\.(\d+)$','\1.\2.\3.1'))
+  $gateway         = pick($gateway, regsubst($network_eth0, '^(\d+)\.(\d+)\.(\d+)\.(\d+)$','\1.\2.\3.1')),
+  $wait_to_gateway = true
 
 ) inherits network::params {
 
