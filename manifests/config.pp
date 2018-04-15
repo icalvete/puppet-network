@@ -1,5 +1,5 @@
 class network::config {
-  
+
   include ::rclocal
 
   ::rclocal::register{ 'set_gateway':
@@ -9,7 +9,7 @@ class network::config {
 ",
     order   => '02'
   }
- 
+
   if $network::wait_to_gateway {
     ::rclocal::register{ 'set_wait_to_gateway':
       content => "
